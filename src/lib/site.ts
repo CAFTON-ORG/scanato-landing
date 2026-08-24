@@ -1,8 +1,9 @@
-export const demoHref = "/#demo"
+export const demoHref = "/demo"
 
 export const navItems = [
+  { name: "Home", href: "/" },
+  { name: "How it works", href: "/how-it-works" },
   { name: "Product", href: "/product" },
-  { name: "How it works", href: "/#how-it-works" },
 ] as const
 
 export const site = {
@@ -50,8 +51,8 @@ export const sampleFeatures = [
     body: "A guest flags an allergen on the phone. Unsafe dishes grey out before they tap add.",
   },
   {
-    id: "device-locale",
-    title: "Phone language, house kitchen",
-    body: "The menu follows the guest device. Tickets print in the house language so the line never slows.",
+    id: "geofence",
+    title: "Store-bound ordering",
+    body: "If the guest walks outside the venue zone, the menu locks. The ticket stays on the table until they are back inside.",
   },
 ] as const

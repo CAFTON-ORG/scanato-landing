@@ -6,7 +6,7 @@ import { PageShell } from "@/components/layout/page-shell"
 
 export function DemoCta() {
   return (
-    <section id="demo" className="scroll-mt-20 border-t bg-primary py-16 sm:py-20">
+    <section className="border-t bg-primary py-16 sm:py-20">
       <PageShell className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,380px)] lg:items-end">
         <div>
           <h2 className="max-w-[16ch] text-3xl font-semibold tracking-tight text-primary-foreground md:text-4xl">
@@ -19,7 +19,7 @@ export function DemoCta() {
           </p>
         </div>
         <form
-          action="#"
+          action="/demo"
           method="post"
           autoComplete="off"
           noValidate

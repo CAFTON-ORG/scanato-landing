@@ -30,7 +30,7 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={cn("antialiased", geistSans.variable, geistMono.variable)}
+      className={cn("dark antialiased", geistSans.variable, geistMono.variable)}
     >
       <body className="font-sans">
         {/*
