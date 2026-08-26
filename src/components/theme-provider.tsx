@@ -3,6 +3,22 @@
 import * as React from "react"
 import { ThemeProvider as NextThemesProvider, useTheme } from "next-themes"
 
+// next-themes injects a <script> to set the theme class before paint (no-flash).
+// React 19 warns about any <script> in a component tree, but this one runs fine
+// via the server-rendered HTML. See https://github.com/pacocoursey/next-themes/issues/385
+if (typeof window !== "undefined" && process.env.NODE_ENV === "development") {
+  const originalError = console.error
+  console.error = (...args: unknown[]) => {
+    if (
+      typeof args[0] === "string" &&
+      args[0].includes("Encountered a script tag while rendering")
+    ) {
+      return
+    }
+    originalError.apply(console, args)
+  }
+}
+
 function ThemeProvider({
   children,
   ...props
